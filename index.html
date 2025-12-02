@@ -36,7 +36,7 @@
         letter-spacing: 2px;
     }
 
-    /* Grid de tarjetas */
+    /* Grid */
     .container {
         max-width: 900px;
         margin: auto;
@@ -46,29 +46,38 @@
         gap: 20px;
     }
 
-    /* Estilo de tarjetas */
+    /* Tarjeta con imagen */
     .card {
         background: #333;
         color: white;
         padding: 20px;
         border-radius: 12px;
-        text-align: center;
         font-size: 22px;
         font-weight: bold;
         cursor: pointer;
         transition: 0.2s;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .card:hover {
         background: #444;
         transform: scale(1.05);
     }
+
+    .card img {
+        width: 55px;
+        height: 55px;
+        object-fit: contain;
+        margin-left: 10px;
+    }
 </style>
 
 </head>
 <body>
 
-<!-- Logos arriba -->
+<!-- Barra superior -->
 <div class="top-bar">
     <img src="rimac_logo.png" alt="Rimac">
     <img src="cientifica_logo.png" alt="Científica">
@@ -77,48 +86,47 @@
 <!-- Título -->
 <div class="header">STAKEHOLDERS</div>
 
-<!-- Tarjetas de stakeholders -->
+<!-- Lista -->
 <div class="container">
 
     <div class="card" onclick="openImage('Atencion_cliente.png')">
         Atención al cliente
+        <img src="https://img.icons8.com/ios-filled/100/customer-support.png">
     </div>
 
     <div class="card" onclick="openImage('Atencion_medica.png')">
         Servicios médicos
+        <img src="https://img.icons8.com/ios-filled/100/hospital.png">
     </div>
 
     <div class="card" onclick="openImage('Medios_Comunicacion.png')">
         Atención a medios de comunicación
+        <img src="https://img.icons8.com/ios-filled/100/microphone.png">
     </div>
 
     <div class="card" onclick="openImage('Banco.png')">
         Banco
+        <img src="https://img.icons8.com/ios-filled/100/bank.png">
     </div>
 
     <div class="card" onclick="openImage('Competencia.png')">
         Competencia
+        <img src="https://img.icons8.com/ios-filled/100/trophy.png">
     </div>
 
     <div class="card" onclick="openImage('Inversionistas.png')">
         Consulta de inversiones
+        <img src="https://img.icons8.com/ios-filled/100/investment.png">
     </div>
 
+    <!-- REGULACIONES UNIDAS EN UN SOLO BOTÓN -->
     <div class="card" onclick="openImage('Regulacion_1.png')">
-        Regulación 1
-    </div>
-
-    <div class="card" onclick="openImage('Regulacion_2.png')">
-        Regulación 2
-    </div>
-
-    <div class="card" onclick="openImage('Regulacion_3.png')">
-        Regulación 3
+        Regulación (1, 2 y 3)
+        <img src="https://img.icons8.com/ios-filled/100/rules.png">
     </div>
 
 </div>
 
-<!-- Función para abrir imágenes -->
 <script>
 function openImage(file) {
     window.location.href = file;
