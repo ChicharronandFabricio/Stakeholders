@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stakeholders</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #d60000;
+    }
+
+    /* Barra superior con logos */
+    .top-bar {
+        background: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 3px solid #d60000;
+    }
+
+    .top-bar img {
+        height: 55px;
+    }
+
+    /* Título */
+    .header {
+        padding: 40px 20px;
+        color: white;
+        font-size: 50px;
+        font-weight: 800;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+
+    /* Grid de tarjetas */
+    .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+    }
+
+    /* Estilo de tarjetas */
+    .card {
+        background: #333;
+        color: white;
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .card:hover {
+        background: #444;
+        transform: scale(1.05);
+    }
+</style>
+
+</head>
+<body>
+
+<!-- Logos arriba -->
+<div class="top-bar">
+    <img src="rimac_logo.png" alt="Rimac">
+    <img src="cientifica_logo.png" alt="Científica">
+</div>
+
+<!-- Título -->
+<div class="header">STAKEHOLDERS</div>
+
+<!-- Tarjetas de stakeholders -->
+<div class="container">
+
+    <div class="card" onclick="openImage('Atencion_cliente.png')">
+        Atención al cliente
+    </div>
+
+    <div class="card" onclick="openImage('Atencion_medica.png')">
+        Servicios médicos
+    </div>
+
+    <div class="card" onclick="openImage('Medios_Comunicacion.png')">
+        Atención a medios de comunicación
+    </div>
+
+    <div class="card" onclick="openImage('Banco.png')">
+        Banco
+    </div>
+
+    <div class="card" onclick="openImage('Competencia.png')">
+        Competencia
+    </div>
+
+    <div class="card" onclick="openImage('Inversionistas.png')">
+        Consulta de inversiones
+    </div>
+
+    <div class="card" onclick="openImage('Regulacion_1.png')">
+        Regulación 1
+    </div>
+
+    <div class="card" onclick="openImage('Regulacion_2.png')">
+        Regulación 2
+    </div>
+
+    <div class="card" onclick="openImage('Regulacion_3.png')">
+        Regulación 3
+    </div>
+
+</div>
+
+<!-- Función para abrir imágenes -->
+<script>
+function openImage(file) {
+    window.location.href = file;
+}
+</script>
+
+</body>
+</html>
